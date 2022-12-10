@@ -6,8 +6,13 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.get('/',(request,response)=>{
+    response.write(<h1>Hello welcome to the test api.</h1>);
+    response.write(<h3>To actually see the result, go to '/getdata' route.</h3>);
+    response.send();
+})
 
-app.get('/getdata', (req, response) => {
+app.get('/getdata', (request, response) => {
 
     const url = "https://jsonplaceholder.typicode.com/users";
     https.get(url, (res) => {

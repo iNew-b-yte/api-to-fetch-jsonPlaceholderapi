@@ -7,8 +7,8 @@ app.use(express.json());
 app.use(cors());
 
 app.get('/',(request,response)=>{
-    response.write(<h1>Hello welcome to the test api.</h1>);
-    response.write(<h3>To actually see the result, go to '/getdata' route.</h3>);
+    response.write("<h1>Hello welcome to the test api.</h1>");
+    response.write("<h3>To actually see the result, go to '/getdata' route.</h3>");
     response.send();
 })
 
